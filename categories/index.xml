@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Hao&#39;s Blog</title>
-    <link>https://examplesite.com/categories/</link>
+    <link>https://unnhao.github.io/categories/</link>
     <description>Recent content in Categories on Hao&#39;s Blog</description>
     <image>
-      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://unnhao.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://unnhao.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 11 Feb 2022 00:44:36 +0800</lastBuildDate><atom:link href="https://examplesite.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Feb 2022 00:44:36 +0800</lastBuildDate><atom:link href="https://unnhao.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>development</title>
-      <link>https://examplesite.com/categories/development/</link>
+      <link>https://unnhao.github.io/categories/development/</link>
       <pubDate>Fri, 11 Feb 2022 00:44:36 +0800</pubDate>
       
-      <guid>https://examplesite.com/categories/development/</guid>
+      <guid>https://unnhao.github.io/categories/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>publishing</title>
-      <link>https://examplesite.com/categories/publishing/</link>
+      <link>https://unnhao.github.io/categories/publishing/</link>
       <pubDate>Fri, 11 Feb 2022 00:44:36 +0800</pubDate>
       
-      <guid>https://examplesite.com/categories/publishing/</guid>
+      <guid>https://unnhao.github.io/categories/publishing/</guid>
       <description></description>
     </item>
     

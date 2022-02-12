@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://examplesite.com/categories/</loc>
+    <loc>https://unnhao.github.io/categories/</loc>
     <lastmod>2022-02-11T00:44:36+08:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/tags/content/</loc>
+    <loc>https://unnhao.github.io/tags/content/</loc>
     <lastmod>2022-02-11T00:44:36+08:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/categories/development/</loc>
+    <loc>https://unnhao.github.io/categories/development/</loc>
     <lastmod>2022-02-11T00:44:36+08:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/</loc>
+    <loc>https://unnhao.github.io/</loc>
     <lastmod>2022-02-11T00:44:36+08:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/tags/hugo/</loc>
+    <loc>https://unnhao.github.io/tags/hugo/</loc>
     <lastmod>2022-02-11T00:44:36+08:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/posts/my-first-post/</loc>
+    <loc>https://unnhao.github.io/posts/my-first-post/</loc>
     <lastmod>2022-02-11T00:44:36+08:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/posts/</loc>
+    <loc>https://unnhao.github.io/posts/</loc>
     <lastmod>2022-02-11T00:44:36+08:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/categories/publishing/</loc>
+    <loc>https://unnhao.github.io/categories/publishing/</loc>
     <lastmod>2022-02-11T00:44:36+08:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/tags/static-site-generator/</loc>
+    <loc>https://unnhao.github.io/tags/static-site-generator/</loc>
     <lastmod>2022-02-11T00:44:36+08:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/tags/</loc>
+    <loc>https://unnhao.github.io/tags/</loc>
     <lastmod>2022-02-11T00:44:36+08:00</lastmod>
   </url>
 </urlset>
