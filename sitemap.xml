@@ -2,17 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://unnhao.github.io/tags/blockchain/</loc>
+    <lastmod>2022-02-12T16:04:48+08:00</lastmod>
+  </url><url>
+    <loc>https://unnhao.github.io/categories/</loc>
+    <lastmod>2022-02-12T16:04:48+08:00</lastmod>
+  </url><url>
     <loc>https://unnhao.github.io/</loc>
     <lastmod>2022-02-12T16:04:48+08:00</lastmod>
   </url><url>
     <loc>https://unnhao.github.io/posts/</loc>
     <lastmod>2022-02-12T16:04:48+08:00</lastmod>
   </url><url>
-    <loc>https://unnhao.github.io/posts/truffle-intro/</loc>
+    <loc>https://unnhao.github.io/tags/</loc>
     <lastmod>2022-02-12T16:04:48+08:00</lastmod>
   </url><url>
-    <loc>https://unnhao.github.io/categories/</loc>
+    <loc>https://unnhao.github.io/tags/truffle/</loc>
+    <lastmod>2022-02-12T16:04:48+08:00</lastmod>
   </url><url>
-    <loc>https://unnhao.github.io/tags/</loc>
+    <loc>https://unnhao.github.io/tags/web3/</loc>
+    <lastmod>2022-02-12T16:04:48+08:00</lastmod>
+  </url><url>
+    <loc>https://unnhao.github.io/categories/web3/</loc>
+    <lastmod>2022-02-12T16:04:48+08:00</lastmod>
+  </url><url>
+    <loc>https://unnhao.github.io/posts/truffle-intro/</loc>
+    <lastmod>2022-02-12T16:04:48+08:00</lastmod>
   </url>
 </urlset>

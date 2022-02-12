@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
 <title>初探 Truffle | Hao's Blog</title>
-<meta name=keywords content>
+<meta name=keywords content="truffle,web3,blockchain">
 <meta name=description content="初探 Truffle 筆記，安裝、部署、測試相關指令">
 <meta name=author content="Me">
 <link rel=canonical href=https://unnhao.github.io/posts/truffle-intro/>
@@ -36,7 +36,7 @@
 <meta name=twitter:title content="初探 Truffle">
 <meta name=twitter:description content="初探 Truffle 筆記，安裝、部署、測試相關指令">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://unnhao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"初探 Truffle","item":"https://unnhao.github.io/posts/truffle-intro/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"初探 Truffle","name":"初探 Truffle","description":"初探 Truffle 筆記，安裝、部署、測試相關指令","keywords":[],"articleBody":"  Truffle 簡介 Truffle 是智能合約編譯、測試、除錯、部屬的開發工具。\nTruffle 安裝 npm install -g truffle Truffle 專案結構 以下指令可於資料夾，直接產生一個對應box-name的專案結構。 官方 boxes 連結\ntruffle unbox  範例：以下為產生一個 metacoin 的專案，這是一個簡單的 token 範例。\ntruffle unbox metacoin 一般專案結構\ntruffle-sample ├── build // 編譯後產生的內容 | └── contracts ├── contracts // 合約 | ├── ConvertLib.sol | ├── MetaCoin.sol | └── Migrations.sol ├── LICENSE ├── migrations // migrations 部屬流程 | ├── 1_initial_migration.js | └── 2_deploy_contracts.js ├── test // 測試 | ├── metacoin.js | └── TestMetaCoin.sol └── truffle-config.js // 配置鏈與開發相關環境 Truffle 編譯 編譯並產生 build 編譯後檔案\ntruffle compile Truffle 測試 自動測試 test 部署合約，可指定 truffle-config.js 內的網路設定，可區分開發與正式環境。\ntruffle test --network development Truffle Migration Migration 目的是將我們撰寫的合約部署至鏈上。\n部署合約可指定 truffle-config.js 內的網路設定，可區分開發與正式環境。\ntruffle migrate --network development 測試鏈 可使用 Ganache 建立本地測試鏈 Ganache 官網\n","wordCount":"111","inLanguage":"en","datePublished":"2022-02-12T16:04:48+08:00","dateModified":"2022-02-12T16:04:48+08:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://unnhao.github.io/posts/truffle-intro/"},"publisher":{"@type":"Organization","name":"Hao's Blog","logo":{"@type":"ImageObject","url":"https://unnhao.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"初探 Truffle","name":"初探 Truffle","description":"初探 Truffle 筆記，安裝、部署、測試相關指令","keywords":["truffle","web3","blockchain"],"articleBody":"  Truffle 簡介 Truffle 是智能合約編譯、測試、除錯、部屬的開發工具。\nTruffle 安裝 npm install -g truffle Truffle 專案結構 以下指令可於資料夾，直接產生一個對應box-name的專案結構。 官方 boxes 連結\ntruffle unbox  範例：以下為產生一個 metacoin 的專案，這是一個簡單的 token 範例。\ntruffle unbox metacoin 一般專案結構\ntruffle-sample ├── build // 編譯後產生的內容 | └── contracts ├── contracts // 合約 | ├── ConvertLib.sol | ├── MetaCoin.sol | └── Migrations.sol ├── LICENSE ├── migrations // migrations 部屬流程 | ├── 1_initial_migration.js | └── 2_deploy_contracts.js ├── test // 測試 | ├── metacoin.js | └── TestMetaCoin.sol └── truffle-config.js // 配置鏈與開發相關環境 Truffle 編譯 編譯並產生 build 編譯後檔案\ntruffle compile Truffle 測試 自動測試 test 部署合約，可指定 truffle-config.js 內的網路設定，可區分開發與正式環境。\ntruffle test --network development Truffle Migration Migration 目的是將我們撰寫的合約部署至鏈上。\n部署合約可指定 truffle-config.js 內的網路設定，可區分開發與正式環境。\ntruffle migrate --network development 測試鏈 可使用 Ganache 建立本地測試鏈 Ganache 官網\n","wordCount":"111","inLanguage":"en","datePublished":"2022-02-12T16:04:48+08:00","dateModified":"2022-02-12T16:04:48+08:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://unnhao.github.io/posts/truffle-intro/"},"publisher":{"@type":"Organization","name":"Hao's Blog","logo":{"@type":"ImageObject","url":"https://unnhao.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -116,6 +116,11 @@
 <p>可使用 <code>Ganache</code> 建立本地測試鏈 <a href=https://trufflesuite.com/ganache/>Ganache 官網</a></p>
 </div>
 <footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://unnhao.github.io/tags/truffle/>truffle</a></li>
+<li><a href=https://unnhao.github.io/tags/web3/>web3</a></li>
+<li><a href=https://unnhao.github.io/tags/blockchain/>blockchain</a></li>
+</ul>
 </footer>
 </article>
 </main>
