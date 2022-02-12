@@ -66,19 +66,14 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
-<h2>My First Post
+<h2>初探 Truffle
 </h2>
 </header>
 <section class=entry-content>
-<p>title: Angular formatDate tags: Angular description: NOTE Angular formatDate 困境 目前在沒有momonent.js或各類第三方時間套件的輔助下，完美快速處理時間相關的格式轉換或時區問題。
-主要問題 時區問題 在不同瀏覽器的時間格式如果沒有特別嚴謹，可能導致時區錯誤。
-時間格式 各種時間格式轉換。 formatDate import { formatDate } from '@angular/common'; 此函式是在Angular6出現的，其實也就是Date pipe內使用的函式，
-時間格式 時間格式其實就是跟Date Pipe格式設定方式一樣，雖然根據Angular官方站寫可參照ISO date-time string，但其實格式似乎有差異，像是YYYY-MM-DD (eg 1997-07-16)，在formatDate是無法使用的。
-使用 const date = new Date(); formatDate(date, 'YYYY-MM-DD', 'zh-Hant-TW'); // YYYY-10-DD ISO格式部分無法 formatDate(date, 'mm:ss', 'zh-Hant-TW'); // 57:09 formatDate(date, 'yyyy-MM-dd', 'zh-Hant-TW'); // 2020-10-24 formatDate(date, 'shortTime', 'zh-Hant-TW'); // 下午1:57 那Angular的時間格式就是Date Pipe的文件囉！ https://angular.io/api/common/DatePipe
-const date = new Date(); formatDate(date, 'full', 'zh-Hant-TW', '+0400'); // 2020年10月24日 星期六 上午10:16:54 [GMT+04:00] formatDate(date, 'full', 'zh-Hant-TW'); // 2020年10月24日 星期六 下午2:16:54 [GMT+08:00] 時區 調整時區也就 i18n 時間格式不外乎就是跟地區性有關，Angular已經具備i18n相關功能，其實formatDate也是位於i18n範圍內。預設Angular有en_US這locale。...</p>
+<p>初探 Truffle 筆記，安裝、部署、測試相關指令</p>
 </section>
-<footer class=entry-footer><span title="2022-02-11 00:44:36 +0800 +0800">February 11, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to My First Post" href=https://unnhao.github.io/posts/my-first-post/></a>
+<footer class=entry-footer><span title="2022-02-12 16:04:48 +0800 +0800">February 12, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to 初探 Truffle" href=https://unnhao.github.io/posts/truffle-intro/></a>
 </article>
 </main>
 <footer class=footer>
