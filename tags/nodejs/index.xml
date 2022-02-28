@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Hao&#39;s Blog</title>
-    <link>https://unnhao.github.io/posts/</link>
-    <description>Recent content in Posts on Hao&#39;s Blog</description>
+    <title>nodejs on Hao&#39;s Blog</title>
+    <link>https://unnhao.github.io/tags/nodejs/</link>
+    <description>Recent content in nodejs on Hao&#39;s Blog</description>
     <image>
       <url>https://unnhao.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://unnhao.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 28 Feb 2022 22:16:21 +0800</lastBuildDate><atom:link href="https://unnhao.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 22:16:21 +0800</lastBuildDate><atom:link href="https://unnhao.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GraphQL 基本安裝與使用</title>
       <link>https://unnhao.github.io/posts/graphql-basic-usage/</link>
@@ -17,15 +17,6 @@
       
       <guid>https://unnhao.github.io/posts/graphql-basic-usage/</guid>
       <description>筆記 GraphQL 基本安裝與使用</description>
-    </item>
-    
-    <item>
-      <title>初探 Truffle</title>
-      <link>https://unnhao.github.io/posts/truffle-intro/</link>
-      <pubDate>Sat, 12 Feb 2022 16:04:48 +0800</pubDate>
-      
-      <guid>https://unnhao.github.io/posts/truffle-intro/</guid>
-      <description>初探 Truffle 筆記，安裝、部署、測試相關指令</description>
     </item>
     
   </channel>

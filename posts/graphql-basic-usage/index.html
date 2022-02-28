@@ -3,13 +3,9 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
-<title>Graphql 基本安裝與使用 | Hao's Blog</title>
-<meta name=keywords content>
-<meta name=description content="概述 建構基本 Graphql 專案，單純筆記初始化流程與大致使用流程。
-安裝 初始化 npm 專案
-npm init -y 安裝相依套件
- apollo-server Apollo 伺服器的核心 graphql 用於建構 GraphQL Schema 和 執行 Query  npm install apollo-server graphql touch index.js 定義 GraphQL Schema 定義 Query與 Mutation，驚嘆號為不為 null
-const typeDefs = gql` type Book { title: String author: String } type Query { books: [Book]! } input newBookInput { title: String! author: String! } type Mutation { newBook(input: newBookInput!): Book! } `; 定義資料 此處定義假資料，一般為 DB 連結，或是其他連線。">
+<title>GraphQL 基本安裝與使用 | Hao's Blog</title>
+<meta name=keywords content="graphql,nodejs">
+<meta name=description content="筆記 GraphQL 基本安裝與使用">
 <meta name=author content="Me">
 <link rel=canonical href=https://unnhao.github.io/posts/graphql-basic-usage/>
 <meta name=google-site-verification content="XYZabc">
@@ -29,26 +25,18 @@ const typeDefs = gql` type Book { title: String author: String } type Query { bo
 <style>#theme-toggle,.top-link{display:none}</style>
 <style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-123-45','auto'),ga('send','pageview'))</script><meta property="og:title" content="Graphql 基本安裝與使用">
-<meta property="og:description" content="概述 建構基本 Graphql 專案，單純筆記初始化流程與大致使用流程。
-安裝 初始化 npm 專案
-npm init -y 安裝相依套件
- apollo-server Apollo 伺服器的核心 graphql 用於建構 GraphQL Schema 和 執行 Query  npm install apollo-server graphql touch index.js 定義 GraphQL Schema 定義 Query與 Mutation，驚嘆號為不為 null
-const typeDefs = gql` type Book { title: String author: String } type Query { books: [Book]! } input newBookInput { title: String! author: String! } type Mutation { newBook(input: newBookInput!): Book! } `; 定義資料 此處定義假資料，一般為 DB 連結，或是其他連線。">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-123-45','auto'),ga('send','pageview'))</script><meta property="og:title" content="GraphQL 基本安裝與使用">
+<meta property="og:description" content="筆記 GraphQL 基本安裝與使用">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://unnhao.github.io/posts/graphql-basic-usage/"><meta property="og:image" content="https://unnhao.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2022-02-28T22:16:21+08:00">
 <meta property="article:modified_time" content="2022-02-28T22:16:21+08:00"><meta property="og:site_name" content="ExampleSite">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://unnhao.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
-<meta name=twitter:title content="Graphql 基本安裝與使用">
-<meta name=twitter:description content="概述 建構基本 Graphql 專案，單純筆記初始化流程與大致使用流程。
-安裝 初始化 npm 專案
-npm init -y 安裝相依套件
- apollo-server Apollo 伺服器的核心 graphql 用於建構 GraphQL Schema 和 執行 Query  npm install apollo-server graphql touch index.js 定義 GraphQL Schema 定義 Query與 Mutation，驚嘆號為不為 null
-const typeDefs = gql` type Book { title: String author: String } type Query { books: [Book]! } input newBookInput { title: String! author: String! } type Mutation { newBook(input: newBookInput!): Book! } `; 定義資料 此處定義假資料，一般為 DB 連結，或是其他連線。">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://unnhao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Graphql 基本安裝與使用","item":"https://unnhao.github.io/posts/graphql-basic-usage/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Graphql 基本安裝與使用","name":"Graphql 基本安裝與使用","description":"概述 建構基本 Graphql 專案，單純筆記初始化流程與大致使用流程。\n安裝 初始化 npm 專案\nnpm init -y 安裝相依套件\n apollo-server Apollo 伺服器的核心 graphql 用於建構 GraphQL Schema 和 執行 Query  npm install apollo-server graphql touch index.js 定義 GraphQL Schema 定義 Query與 Mutation，驚嘆號為不為 null\nconst typeDefs = gql` type Book { title: String author: String } type Query { books: [Book]! } input newBookInput { title: String! author: String! } type Mutation { newBook(input: newBookInput!): Book! } `; 定義資料 此處定義假資料，一般為 DB 連結，或是其他連線。","keywords":[],"articleBody":"概述 建構基本 Graphql 專案，單純筆記初始化流程與大致使用流程。\n安裝 初始化 npm 專案\nnpm init -y 安裝相依套件\n apollo-server Apollo 伺服器的核心 graphql 用於建構 GraphQL Schema 和 執行 Query  npm install apollo-server graphql touch index.js 定義 GraphQL Schema 定義 Query與 Mutation，驚嘆號為不為 null\nconst typeDefs = gql` type Book { title: String author: String } type Query { books: [Book]! } input newBookInput { title: String! author: String! } type Mutation { newBook(input: newBookInput!): Book! } `; 定義資料 此處定義假資料，一般為 DB 連結，或是其他連線。\nconst books = [ { title: \"The Awakening\", author: \"Kate Chopin\", }, { title: \"City of Glass\", author: \"Paul Auster\", }, ]; 定義 Resolver  第一個參數是父層的 Type，如果是在根上的 Query、Mutation，此處會是空。 第二個參數會是 Query、Mutation 的參數。 第三個參數會是 Context。 第四個參數會是更細部的 Query 參數。  const resolvers = { Query: { books: (_, __, ctx) = { return ctx.books; } }, Mutation: { newBook(_, { input }, ctx) { ctx.books.push(input); return input; } } } 建立 ApolloServer 實體 透過 context 可以傳遞 Model 或是 DB 連線等等..，此處也可針對 Header 進行身分驗證，並拋出錯誤。\nconst server = new ApolloServer({ typeDefs, resolvers, context() { return { books } } }) server.listen(4000).then(({ url }) = { console.log(`Server ready at ${url}`) }) 執行 node index.js 參考 Apollographql Docs\n","wordCount":"181","inLanguage":"en","datePublished":"2022-02-28T22:16:21+08:00","dateModified":"2022-02-28T22:16:21+08:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://unnhao.github.io/posts/graphql-basic-usage/"},"publisher":{"@type":"Organization","name":"Hao's Blog","logo":{"@type":"ImageObject","url":"https://unnhao.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
+<meta name=twitter:title content="GraphQL 基本安裝與使用">
+<meta name=twitter:description content="筆記 GraphQL 基本安裝與使用">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://unnhao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"GraphQL 基本安裝與使用","item":"https://unnhao.github.io/posts/graphql-basic-usage/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"GraphQL 基本安裝與使用","name":"GraphQL 基本安裝與使用","description":"筆記 GraphQL 基本安裝與使用","keywords":["graphql","nodejs"],"articleBody":"概述 建構基本 GraphQL 專案，單純筆記初始化流程與大致使用流程。\n安裝 初始化 npm 專案\nnpm init -y 安裝相依套件\n apollo-server Apollo 伺服器的核心 graphql 用於建構 GraphQL Schema 和 執行 Query  npm install apollo-server graphql touch index.js 定義 GraphQL Schema 定義 Query與 Mutation，驚嘆號為不為 null\nconst typeDefs = gql` type Book { title: String author: String } type Query { books: [Book]! } input newBookInput { title: String! author: String! } type Mutation { newBook(input: newBookInput!): Book! } `; 定義資料 此處定義假資料，一般為 DB 連結，或是其他連線。\nconst books = [ { title: \"The Awakening\", author: \"Kate Chopin\", }, { title: \"City of Glass\", author: \"Paul Auster\", }, ]; 定義 Resolver  第一個參數是父層的 Type，如果是在根上的 Query、Mutation，此處會是空。 第二個參數會是 Query、Mutation 的參數。 第三個參數會是 Context。 第四個參數會是更細部的 Query 參數。  const resolvers = { Query: { books: (_, __, ctx) = { return ctx.books; } }, Mutation: { newBook(_, { input }, ctx) { ctx.books.push(input); return input; } } } 建立 ApolloServer 實體 透過 context 可以傳遞 Model 或是 DB 連線等等..，此處也可針對 Header 進行身分驗證，並拋出錯誤。\nconst server = new ApolloServer({ typeDefs, resolvers, context() { return { books } } }) server.listen(4000).then(({ url }) = { console.log(`Server ready at ${url}`) }) 執行 node index.js 參考 Apollographql Docs\n","wordCount":"181","inLanguage":"en","datePublished":"2022-02-28T22:16:21+08:00","dateModified":"2022-02-28T22:16:21+08:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://unnhao.github.io/posts/graphql-basic-usage/"},"publisher":{"@type":"Organization","name":"Hao's Blog","logo":{"@type":"ImageObject","url":"https://unnhao.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -80,13 +68,13 @@ const typeDefs = gql` type Book { title: String author: String } type Query { bo
 <header class=post-header>
 <div class=breadcrumbs><a href=https://unnhao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://unnhao.github.io/posts/>Posts</a></div>
 <h1 class=post-title>
-Graphql 基本安裝與使用
+GraphQL 基本安裝與使用
 </h1>
 <div class=post-meta><span title="2022-02-28 22:16:21 +0800 +0800">February 28, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/graphql-basic-usage.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header>
 <div class=post-content><h2 id=概述>概述<a hidden class=anchor aria-hidden=true href=#概述>#</a></h2>
-<p>建構基本 <code>Graphql</code> 專案，單純筆記初始化流程與大致使用流程。</p>
+<p>建構基本 <code>GraphQL</code> 專案，單純筆記初始化流程與大致使用流程。</p>
 <h2 id=安裝>安裝<a hidden class=anchor aria-hidden=true href=#安裝>#</a></h2>
 <p>初始化 <code>npm</code> 專案</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm init -y
@@ -169,6 +157,10 @@ Graphql 基本安裝與使用
 <p><a href=https://www.apollographql.com/docs/apollo-server/data/resolvers/>Apollographql Docs</a></p>
 </div>
 <footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://unnhao.github.io/tags/graphql/>graphql</a></li>
+<li><a href=https://unnhao.github.io/tags/nodejs/>nodejs</a></li>
+</ul>
 <nav class=paginav>
 <a class=next href=https://unnhao.github.io/posts/truffle-intro/>
 <span class=title>Next Page »</span>
