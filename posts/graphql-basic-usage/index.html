@@ -1,0 +1,196 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Graphql 基本安裝與使用 | Hao's Blog</title>
+<meta name=keywords content>
+<meta name=description content="概述 建構基本 Graphql 專案，單純筆記初始化流程與大致使用流程。
+安裝 初始化 npm 專案
+npm init -y 安裝相依套件
+ apollo-server Apollo 伺服器的核心 graphql 用於建構 GraphQL Schema 和 執行 Query  npm install apollo-server graphql touch index.js 定義 GraphQL Schema 定義 Query與 Mutation，驚嘆號為不為 null
+const typeDefs = gql` type Book { title: String author: String } type Query { books: [Book]! } input newBookInput { title: String! author: String! } type Mutation { newBook(input: newBookInput!): Book! } `; 定義資料 此處定義假資料，一般為 DB 連結，或是其他連線。">
+<meta name=author content="Me">
+<link rel=canonical href=https://unnhao.github.io/posts/graphql-basic-usage/>
+<meta name=google-site-verification content="XYZabc">
+<meta name=yandex-verification content="XYZabc">
+<meta name=msvalidate.01 content="XYZabc">
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.5c6da8ef8bcaaf4cbf30a46b3c8a5d6eaff6209a83b23acfdce3d3468408e1f8.css integrity="sha256-XG2o74vKr0y/MKRrPIpdbq/2IJqDsjrP3OPTRoQI4fg=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://unnhao.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=icon type=image/png sizes=16x16 href=https://unnhao.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=icon type=image/png sizes=32x32 href=https://unnhao.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=apple-touch-icon href=https://unnhao.github.io/%3Clink%20/%20abs%20url%3E>
+<link rel=mask-icon href=https://unnhao.github.io/%3Clink%20/%20abs%20url%3E>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.92.1">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-123-45','auto'),ga('send','pageview'))</script><meta property="og:title" content="Graphql 基本安裝與使用">
+<meta property="og:description" content="概述 建構基本 Graphql 專案，單純筆記初始化流程與大致使用流程。
+安裝 初始化 npm 專案
+npm init -y 安裝相依套件
+ apollo-server Apollo 伺服器的核心 graphql 用於建構 GraphQL Schema 和 執行 Query  npm install apollo-server graphql touch index.js 定義 GraphQL Schema 定義 Query與 Mutation，驚嘆號為不為 null
+const typeDefs = gql` type Book { title: String author: String } type Query { books: [Book]! } input newBookInput { title: String! author: String! } type Mutation { newBook(input: newBookInput!): Book! } `; 定義資料 此處定義假資料，一般為 DB 連結，或是其他連線。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://unnhao.github.io/posts/graphql-basic-usage/"><meta property="og:image" content="https://unnhao.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-02-28T22:16:21+08:00">
+<meta property="article:modified_time" content="2022-02-28T22:16:21+08:00"><meta property="og:site_name" content="ExampleSite">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://unnhao.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name=twitter:title content="Graphql 基本安裝與使用">
+<meta name=twitter:description content="概述 建構基本 Graphql 專案，單純筆記初始化流程與大致使用流程。
+安裝 初始化 npm 專案
+npm init -y 安裝相依套件
+ apollo-server Apollo 伺服器的核心 graphql 用於建構 GraphQL Schema 和 執行 Query  npm install apollo-server graphql touch index.js 定義 GraphQL Schema 定義 Query與 Mutation，驚嘆號為不為 null
+const typeDefs = gql` type Book { title: String author: String } type Query { books: [Book]! } input newBookInput { title: String! author: String! } type Mutation { newBook(input: newBookInput!): Book! } `; 定義資料 此處定義假資料，一般為 DB 連結，或是其他連線。">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://unnhao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Graphql 基本安裝與使用","item":"https://unnhao.github.io/posts/graphql-basic-usage/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Graphql 基本安裝與使用","name":"Graphql 基本安裝與使用","description":"概述 建構基本 Graphql 專案，單純筆記初始化流程與大致使用流程。\n安裝 初始化 npm 專案\nnpm init -y 安裝相依套件\n apollo-server Apollo 伺服器的核心 graphql 用於建構 GraphQL Schema 和 執行 Query  npm install apollo-server graphql touch index.js 定義 GraphQL Schema 定義 Query與 Mutation，驚嘆號為不為 null\nconst typeDefs = gql` type Book { title: String author: String } type Query { books: [Book]! } input newBookInput { title: String! author: String! } type Mutation { newBook(input: newBookInput!): Book! } `; 定義資料 此處定義假資料，一般為 DB 連結，或是其他連線。","keywords":[],"articleBody":"概述 建構基本 Graphql 專案，單純筆記初始化流程與大致使用流程。\n安裝 初始化 npm 專案\nnpm init -y 安裝相依套件\n apollo-server Apollo 伺服器的核心 graphql 用於建構 GraphQL Schema 和 執行 Query  npm install apollo-server graphql touch index.js 定義 GraphQL Schema 定義 Query與 Mutation，驚嘆號為不為 null\nconst typeDefs = gql` type Book { title: String author: String } type Query { books: [Book]! } input newBookInput { title: String! author: String! } type Mutation { newBook(input: newBookInput!): Book! } `; 定義資料 此處定義假資料，一般為 DB 連結，或是其他連線。\nconst books = [ { title: \"The Awakening\", author: \"Kate Chopin\", }, { title: \"City of Glass\", author: \"Paul Auster\", }, ]; 定義 Resolver  第一個參數是父層的 Type，如果是在根上的 Query、Mutation，此處會是空。 第二個參數會是 Query、Mutation 的參數。 第三個參數會是 Context。 第四個參數會是更細部的 Query 參數。  const resolvers = { Query: { books: (_, __, ctx) = { return ctx.books; } }, Mutation: { newBook(_, { input }, ctx) { ctx.books.push(input); return input; } } } 建立 ApolloServer 實體 透過 context 可以傳遞 Model 或是 DB 連線等等..，此處也可針對 Header 進行身分驗證，並拋出錯誤。\nconst server = new ApolloServer({ typeDefs, resolvers, context() { return { books } } }) server.listen(4000).then(({ url }) = { console.log(`Server ready at ${url}`) }) 執行 node index.js 參考 Apollographql Docs\n","wordCount":"181","inLanguage":"en","datePublished":"2022-02-28T22:16:21+08:00","dateModified":"2022-02-28T22:16:21+08:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://unnhao.github.io/posts/graphql-basic-usage/"},"publisher":{"@type":"Organization","name":"Hao's Blog","logo":{"@type":"ImageObject","url":"https://unnhao.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://unnhao.github.io/ accesskey=h title="Hao's Blog (Alt + H)">Hao's Blog</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div>
+<ul id=menu>
+<li>
+<a href=https://unnhao.github.io/categories/ title=categories>
+<span>categories</span>
+</a>
+</li>
+<li>
+<a href=https://unnhao.github.io/tags/ title=tags>
+<span>tags</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://unnhao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://unnhao.github.io/posts/>Posts</a></div>
+<h1 class=post-title>
+Graphql 基本安裝與使用
+</h1>
+<div class=post-meta><span title="2022-02-28 22:16:21 +0800 +0800">February 28, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/graphql-basic-usage.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div>
+</header>
+<div class=post-content><h2 id=概述>概述<a hidden class=anchor aria-hidden=true href=#概述>#</a></h2>
+<p>建構基本 <code>Graphql</code> 專案，單純筆記初始化流程與大致使用流程。</p>
+<h2 id=安裝>安裝<a hidden class=anchor aria-hidden=true href=#安裝>#</a></h2>
+<p>初始化 <code>npm</code> 專案</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm init -y
+</code></pre></div><p>安裝相依套件</p>
+<ul>
+<li><code>apollo-server</code> Apollo 伺服器的核心</li>
+<li><code>graphql</code> 用於建構 <code>GraphQL Schema</code> 和 執行 <code>Query</code></li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>npm install apollo-server graphql
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>touch index.js
+</code></pre></div><h2 id=定義-graphql-schema>定義 <code>GraphQL Schema</code><a hidden class=anchor aria-hidden=true href=#定義-graphql-schema>#</a></h2>
+<p>定義 <code>Query</code>與 <code>Mutation</code>，驚嘆號為不為 <code>null</code></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>typeDefs</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>gql</span><span style=color:#e6db74>`
+</span><span style=color:#e6db74>  type Book {
+</span><span style=color:#e6db74>    title: String
+</span><span style=color:#e6db74>    author: String
+</span><span style=color:#e6db74>  }
+</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>  type Query {
+</span><span style=color:#e6db74>    books: [Book]!
+</span><span style=color:#e6db74>  }
+</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>  input newBookInput {
+</span><span style=color:#e6db74>      title: String!
+</span><span style=color:#e6db74>      author: String!
+</span><span style=color:#e6db74>  }
+</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>  type Mutation {
+</span><span style=color:#e6db74>    newBook(input: newBookInput!): Book!
+</span><span style=color:#e6db74>  }
+</span><span style=color:#e6db74>`</span>;
+</code></pre></div><h2 id=定義資料>定義資料<a hidden class=anchor aria-hidden=true href=#定義資料>#</a></h2>
+<p>此處定義假資料，一般為 <code>DB</code> 連結，或是其他連線。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>books</span> <span style=color:#f92672>=</span> [
+  {
+    <span style=color:#a6e22e>title</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;The Awakening&#34;</span>,
+    <span style=color:#a6e22e>author</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Kate Chopin&#34;</span>,
+  },
+  {
+    <span style=color:#a6e22e>title</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;City of Glass&#34;</span>,
+    <span style=color:#a6e22e>author</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Paul Auster&#34;</span>,
+  },
+];
+</code></pre></div><h2 id=定義-resolver>定義 <code>Resolver</code><a hidden class=anchor aria-hidden=true href=#定義-resolver>#</a></h2>
+<ul>
+<li>第一個參數是父層的 <code>Type</code>，如果是在根上的 <code>Query</code>、<code>Mutation</code>，此處會是空。</li>
+<li>第二個參數會是 <code>Query</code>、<code>Mutation</code> 的參數。</li>
+<li>第三個參數會是 <code>Context</code>。</li>
+<li>第四個參數會是更細部的 <code>Query</code> 參數。</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>resolvers</span> <span style=color:#f92672>=</span> {
+    <span style=color:#a6e22e>Query</span><span style=color:#f92672>:</span> {
+        <span style=color:#a6e22e>books</span><span style=color:#f92672>:</span> (<span style=color:#a6e22e>_</span>, <span style=color:#a6e22e>__</span>, <span style=color:#a6e22e>ctx</span>) =&gt; {
+            <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>ctx</span>.<span style=color:#a6e22e>books</span>;
+        }
+    },
+    <span style=color:#a6e22e>Mutation</span><span style=color:#f92672>:</span> {
+        <span style=color:#a6e22e>newBook</span>(<span style=color:#a6e22e>_</span>, { <span style=color:#a6e22e>input</span> }, <span style=color:#a6e22e>ctx</span>) {
+            <span style=color:#a6e22e>ctx</span>.<span style=color:#a6e22e>books</span>.<span style=color:#a6e22e>push</span>(<span style=color:#a6e22e>input</span>);
+            <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>input</span>;
+        }
+    }
+}
+</code></pre></div><h2 id=建立-apolloserver-實體>建立 <code>ApolloServer</code> 實體<a hidden class=anchor aria-hidden=true href=#建立-apolloserver-實體>#</a></h2>
+<p>透過 <code>context</code> 可以傳遞 Model 或是 DB 連線等等..，此處也可針對 <code>Header</code> 進行身分驗證，並拋出錯誤。</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>server</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>ApolloServer</span>({
+    <span style=color:#a6e22e>typeDefs</span>,
+    <span style=color:#a6e22e>resolvers</span>,
+    <span style=color:#a6e22e>context</span>() {
+        <span style=color:#66d9ef>return</span> { <span style=color:#a6e22e>books</span> }
+    }
+})
+
+<span style=color:#a6e22e>server</span>.<span style=color:#a6e22e>listen</span>(<span style=color:#ae81ff>4000</span>).<span style=color:#a6e22e>then</span>(({ <span style=color:#a6e22e>url</span> }) =&gt; {
+    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`Server ready at </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>url</span><span style=color:#e6db74>}</span><span style=color:#e6db74>`</span>)
+})
+</code></pre></div><h2 id=執行>執行<a hidden class=anchor aria-hidden=true href=#執行>#</a></h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>node index.js
+</code></pre></div><h2 id=參考>參考<a hidden class=anchor aria-hidden=true href=#參考>#</a></h2>
+<p><a href=https://www.apollographql.com/docs/apollo-server/data/resolvers/>Apollographql Docs</a></p>
+</div>
+<footer class=post-footer>
+<nav class=paginav>
+<a class=next href=https://unnhao.github.io/posts/truffle-intro/>
+<span class=title>Next Page »</span>
+<br>
+<span>初探 Truffle</span>
+</a>
+</nav>
+</footer>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2022 <a href=https://unnhao.github.io/>Hao's Blog</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>
